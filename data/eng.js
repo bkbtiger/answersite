@@ -200,8 +200,8 @@
 },
 
 {
-  id: "kice_eng_2025_09_g2",
-  provider: "평가원",
+  id: "office_eng_2025_09_g2",
+  provider: "교육청",
   examType: "모의평가",
   grade: "고2",
   subject: "영어",
@@ -223,8 +223,8 @@
 },
 
 {
-  id: "kice_eng_2025_06_g2",
-  provider: "평가원",
+  id: "office_eng_2025_06_g2",
+  provider: "교육청",
   examType: "모의평가",
   grade: "고2",
   subject: "영어",
