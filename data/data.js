@@ -1,4 +1,4 @@
-const examData = [
+﻿const examData = [
   ...korData,
   ...mathData,
   ...engData
