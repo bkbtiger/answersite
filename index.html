@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>모의고사 답지 사이트</title>
+  <meta name="description" content="평가원과 교육청 기출문제 정답을 과목, 학년, 시행년도, 시행월별로 확인할 수 있는 사이트" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>모의고사 답지 사이트</h1>
+      <p>평가원 · 교육청 기출문제 정답 조회</p>
+    </header>
+
+    <section class="card">
+      <div class="filter-grid">
+        <div class="field">
+          <label for="provider">기관</label>
+          <select id="provider">
+            <option value="">선택</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="grade">학년</label>
+          <select id="grade">
+            <option value="">선택</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="subject">과목</label>
+          <select id="subject">
+            <option value="">선택</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="year">시행년도</label>
+          <select id="year">
+            <option value="">선택</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="month">시행월</label>
+          <select id="month">
+            <option value="">선택</option>
+          </select>
+        </div>
+
+        <div class="field hidden" id="paperTypeField">
+          <label for="paperType">유형</label>
+          <select id="paperType">
+            <option value="">선택</option>
+          </select>
+        </div>
+
+        <div class="field hidden" id="selectedSubjectField">
+          <label for="selectedSubject">선택과목</label>
+          <select id="selectedSubject">
+            <option value="">선택</option>
+          </select>
+        </div>
+
+        <div class="field button-field">
+          <label>&nbsp;</label>
+          <button id="searchBtn">검색</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div id="resultArea">
+        <div class="message info">
+          기관, 학년, 과목, 시행년도, 시행월을 선택한 뒤 검색하세요.
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
