@@ -322,7 +322,7 @@ function updateSeo(exam = null) {
   ogTitleEl.setAttribute("content", seoTitle);
   ogDescriptionEl.setAttribute("content", seoDesc);
 
-  siteTitleEl.innerHTML = `${getExamTitle(exam)} ${getExamBadge(exam)}`;
+  siteTitleEl.textContent = getExamTitle(exam);
   siteSubtitleEl.textContent = getExamSubtitle(exam);
 }
 
