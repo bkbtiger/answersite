@@ -1,7 +1,7 @@
 ﻿const mathData = [
 
 {
-  id: "kice_math_2026_11_odd_prob",
+  id: "kice_math_2025_11_odd_prob",
   provider: "평가원",
   examType: "수능",
   grade: "고3",
@@ -18,7 +18,7 @@
 },
 
 {
-  id: "kice_math_2026_11_odd_calc",
+  id: "kice_math_2025_11_odd_calc",
   provider: "평가원",
   examType: "수능",
   grade: "고3",
@@ -35,7 +35,7 @@
 },
 
 {
-  id: "kice_math_2026_11_odd_geo",
+  id: "kice_math_2025_11_odd_geo",
   provider: "평가원",
   examType: "수능",
   grade: "고3",
@@ -52,7 +52,7 @@
 },
 
 {
-  id: "kice_math_2026_11_even_prob",
+  id: "kice_math_2025_11_even_prob",
   provider: "평가원",
   examType: "수능",
   grade: "고3",
@@ -69,7 +69,7 @@
 },
 
 {
-  id: "kice_math_2026_11_even_calc",
+  id: "kice_math_2025_11_even_calc",
   provider: "평가원",
   examType: "수능",
   grade: "고3",
@@ -86,7 +86,7 @@
 },
 
 {
-  id: "kice_math_2026_11_even_geo",
+  id: "kice_math_2025_11_even_geo",
   provider: "평가원",
   examType: "수능",
   grade: "고3",

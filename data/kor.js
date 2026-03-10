@@ -1,7 +1,7 @@
 ﻿const korData = [
 
 {
-  id: "kice_kor_2026_11_odd_hw",
+  id: "kice_kor_2025_11_odd_hw",
   provider: "평가원",
   examType: "수능",
   grade: "고3",
@@ -20,7 +20,7 @@
 },
 
 {
-  id: "kice_kor_2026_11_odd_lm",
+  id: "kice_kor_2025_11_odd_lm",
   provider: "평가원",
   examType: "수능",
   grade: "고3",
@@ -39,7 +39,7 @@
 },
 
 {
-  id: "kice_kor_2026_11_even_hw",
+  id: "kice_kor_2025_11_even_hw",
   provider: "평가원",
   examType: "수능",
   grade: "고3",
@@ -58,7 +58,7 @@
 },
 
 {
-  id: "kice_kor_2026_11_even_lm",
+  id: "kice_kor_2025_11_even_lm",
   provider: "평가원",
   examType: "수능",
   grade: "고3",

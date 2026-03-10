@@ -1,7 +1,7 @@
 ﻿const engData = [
 
 {
-  id: "kice_eng_2026_11_odd",
+  id: "kice_eng_2025_11_odd",
   provider: "평가원",
   examType: "수능",
   grade: "고3",
@@ -20,7 +20,7 @@
 },
 
 {
-  id: "kice_eng_2026_11_even",
+  id: "kice_eng_2025_11_even",
   provider: "평가원",
   examType: "수능",
   grade: "고3",
