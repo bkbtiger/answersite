@@ -228,6 +228,21 @@ function getExamTitle(exam) {
   return `${exam.year}년 ${exam.month}월 ${exam.provider} ${exam.subject} 정답`;
 }
 
+function getExamBadge(exam) {
+
+  if (exam.provider === VAL_KICE && exam.examType === VAL_MOCK_KICE) {
+    const nextYear = (exam.year + 1) % 100;
+    return `<span class="exam-badge">${nextYear}수능 대비</span>`;
+  }
+
+  if (exam.provider === VAL_KICE && exam.examType === VAL_CSAT) {
+    const year = exam.year % 100;
+    return `<span class="exam-badge">${year} 수능</span>`;
+  }
+
+  return "";
+}
+
 function getExamSubtitle(exam) {
   const parts = [
     `기관: ${exam.provider}`,
@@ -367,7 +382,8 @@ function renderResult(exam) {
   const answerTables = createAnswerTables(exam.answers, 5);
 
   resultAreaEl.innerHTML = `
-    <h2 class="result-title">${getExamTitle(exam)}</h2>
+    <h2 class="result-title">${getExamTitle(exam)} ${getExamBadge(exam)}
+    </h2>
     <p class="result-subtitle">${getExamSubtitle(exam)}</p>
 
     <div class="meta">

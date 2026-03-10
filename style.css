@@ -276,3 +276,10 @@ td {
     width: 100%;
   }
 }
+
+.exam-badge{
+  color:#e53935;
+  font-weight:700;
+  margin-left:10px;
+  font-size:0.9em;
+}
