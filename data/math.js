@@ -100,6 +100,544 @@
     2,5,4,4,9,16,12,15,130,65,457,
     3,1,5,2,4,4,360,221
   ]
+},
+
+{
+  id: "office_math_2025_10_calc",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2025,
+  month: 10,
+  paperType: "공통",
+  selectedSubject: "미적분",
+  answers: [
+    3,5,4,1,1,
+    5,5,2,3,2,
+    3,2,4,1,4,
+    6,14,120,11,3,
+    81,63,
+    5,1,3,4,2,
+    2,686,8
+  ]
+},
+
+{
+  id: "office_math_2025_10_prob",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2025,
+  month: 10,
+  paperType: "공통",
+  selectedSubject: "확률과 통계",
+  answers: [
+    3,5,4,1,1,
+    5,5,2,3,2,
+    3,2,4,1,4,
+    6,14,120,11,3,
+    81,63,
+    2,3,5,4,1,
+    2,180,17
+  ]
+},
+
+{
+  id: "office_math_2025_10_geo",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2025,
+  month: 10,
+  paperType: "공통",
+  selectedSubject: "기하",
+  answers: [
+    3,5,4,1,1,
+    5,5,2,3,2,
+    3,2,4,1,4,
+    6,14,120,11,3,
+    81,63,
+    5,2,4,1,3,
+    3,48,320
+  ]
+},
+
+{
+  id: "kice_math_2025_09_prob",
+  provider: "평가원",
+  examType: "모의평가",
+  grade: "고3",
+  subject: "수학",
+  year: 2025,
+  month: 9,
+  paperType: "공통",
+  selectedSubject: "확률과 통계",
+  answers: [
+    4,4,5,1,2,
+    5,1,3,2,3,
+    5,1,4,3,5,
+    8,17,30,10,12,
+    296,73,
+    4,3,5,2,4,
+    2,23,80
+  ]
+},
+
+{
+  id: "kice_math_2025_09_calc",
+  provider: "평가원",
+  examType: "모의평가",
+  grade: "고3",
+  subject: "수학",
+  year: 2025,
+  month: 9,
+  paperType: "공통",
+  selectedSubject: "미적분",
+  answers: [
+    4,4,5,1,2,
+    5,1,3,2,3,
+    5,1,4,3,5,
+    8,17,30,10,12,
+    296,73,
+    1,4,2,1,1,
+    2,91,31
+  ]
+},
+
+{
+  id: "kice_math_2025_09_geo",
+  provider: "평가원",
+  examType: "모의평가",
+  grade: "고3",
+  subject: "수학",
+  year: 2025,
+  month: 9,
+  paperType: "공통",
+  selectedSubject: "기하",
+  answers: [
+    4,4,5,1,2,
+    5,1,3,2,3,
+    5,1,4,3,5,
+    8,17,30,10,12,
+    296,73,
+    2,4,1,1,2,
+    4,396,69
+  ]
+},
+
+{
+  id: "office_math_2025_07_prob",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2025,
+  month: 7,
+  paperType: "공통",
+  selectedSubject: "확률과 통계",
+  answers: [
+    3,4,2,1,5,
+    1,4,2,4,3,
+    3,2,5,2,1,
+    2,5,163,10,24,
+    28,76,
+    4,1,3,2,1,
+    2,285,34
+  ]
+},
+
+{
+  id: "office_math_2025_07_calc",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2025,
+  month: 7,
+  paperType: "공통",
+  selectedSubject: "미적분",
+  answers: [
+    3,4,2,1,5,
+    1,4,2,4,3,
+    3,2,5,2,1,
+    2,5,163,10,24,
+    28,76,
+    1,4,3,2,5,
+    2,16,72
+  ]
+},
+
+{
+  id: "office_math_2025_07_geo",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2025,
+  month: 7,
+  paperType: "공통",
+  selectedSubject: "기하",
+  answers: [
+    3,4,2,1,5,
+    1,4,2,4,3,
+    3,2,5,2,1,
+    2,5,163,10,24,
+    28,76,
+    3,1,4,3,2,
+    5,12,25
+  ]
+},
+
+{
+  id: "kice_math_2025_06_prob",
+  provider: "평가원",
+  examType: "모의평가",
+  grade: "고3",
+  subject: "수학",
+  year: 2025,
+  month: 6,
+  paperType: "공통",
+  selectedSubject: "확률과 통계",
+  answers: [
+    2,1,3,3,2,
+    4,5,5,2,1,
+    5,2,4,2,1,
+    2,6,133,8,85,
+    42,38,
+    3,4,3,5,1,
+    5,44,115
+  ]
+},
+
+{
+  id: "kice_math_2025_06_calc",
+  provider: "평가원",
+  examType: "모의평가",
+  grade: "고3",
+  subject: "수학",
+  year: 2025,
+  month: 6,
+  paperType: "공통",
+  selectedSubject: "미적분",
+  answers: [
+    2,1,3,3,2,
+    4,5,5,2,1,
+    5,2,4,2,1,
+    2,6,133,8,85,
+    42,38,
+    1,2,4,2,3,
+    1,109,25
+  ]
+},
+
+{
+  id: "kice_math_2025_06_geo",
+  provider: "평가원",
+  examType: "모의평가",
+  grade: "고3",
+  subject: "수학",
+  year: 2025,
+  month: 6,
+  paperType: "공통",
+  selectedSubject: "기하",
+  answers: [
+    2,1,3,3,2,
+    4,5,5,2,1,
+    5,2,4,2,1,
+    2,6,133,8,85,
+    42,38,
+    2,4,2,1,3,
+    4,20,36
+  ]
+},
+
+{
+  id: "office_math_2026_05_prob",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2026,
+  month: 5,
+  paperType: "공통",
+  selectedSubject: "확률과 통계",
+  answers: [
+    5,1,3,1,4,
+    5,2,1,4,3,
+    1,3,2,4,5,
+    10,2,23,16,110,
+    200,71,
+    5,4,3,1,3,
+    4,720,376
+  ]
+},
+
+{
+  id: "office_math_2026_05_calc",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2026,
+  month: 5,
+  paperType: "공통",
+  selectedSubject: "미적분",
+  answers: [
+    5,1,3,1,4,
+    5,2,1,4,3,
+    1,3,2,4,5,
+    10,2,23,16,110,
+    200,71,
+    2,3,1,5,4,
+    3,45,15
+  ]
+},
+
+{
+  id: "office_math_2026_05_geo",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2026,
+  month: 5,
+  paperType: "공통",
+  selectedSubject: "기하",
+  answers: [
+    5,1,3,1,4,
+    5,2,1,4,3,
+    1,3,2,4,5,
+    10,2,23,16,110,
+    200,71,
+    1,3,2,5,4,
+    5,20,243
+  ]
+},
+
+{
+  id: "office_math_2025_03_prob",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2025,
+  month: 3,
+  paperType: "공통",
+  selectedSubject: "확률과 통계",
+  answers: [
+    2,4,3,2,5,
+    1,5,3,3,5,
+    1,4,3,4,2,
+    6,3,12,32,71,
+    381,154,
+    1,5,2,3,4,
+    4,363,330
+  ]
+},
+
+{
+  id: "office_math_2025_03_calc",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2025,
+  month: 3,
+  paperType: "공통",
+  selectedSubject: "미적분",
+  answers: [
+    2,4,3,2,5,
+    1,5,3,3,5,
+    1,4,3,4,2,
+    6,3,12,32,71,
+    381,154,
+    1,3,4,5,2,
+    4,13,25
+  ]
+},
+
+{
+  id: "office_math_2025_03_geo",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2025,
+  month: 3,
+  paperType: "공통",
+  selectedSubject: "기하",
+  answers: [
+    2,4,3,2,5,
+    1,5,3,3,5,
+    1,4,3,4,2,
+    6,3,12,32,71,
+    381,154,
+    5,3,1,4,2,
+    4,128,60
+  ]
+},
+
+{
+  id: "office_math_2025_10_g2",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고2",
+  subject: "수학",
+  year: 2025,
+  month: 10,
+  paperType: "공통",
+  selectedSubject: "없음",
+  answers: [
+    3,1,4,5,1,
+    2,5,1,3,4,
+    2,3,2,5,3,
+    4,1,5,2,3,
+    3,3,20,7,13,
+    9,12,5,28,50
+  ]
+},
+
+{
+  id: "office_math_2025_09_g2",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고2",
+  subject: "수학",
+  year: 2025,
+  month: 9,
+  paperType: "공통",
+  selectedSubject: "없음",
+  answers: [
+    4,3,5,1,2,
+    5,2,4,1,1,
+    2,3,5,4,5,
+    3,3,4,2,1,
+    1,3,55,5,16,
+    432,10,98,133,25
+  ]
+},
+
+{
+  id: "office_math_2025_06_g2",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고2",
+  subject: "수학",
+  year: 2025,
+  month: 6,
+  paperType: "공통",
+  selectedSubject: "없음",
+  answers: [
+    2,3,4,4,4,
+    2,1,5,3,1,
+    3,1,2,3,2,
+    4,2,5,2,1,
+    5,25,6,31,7,
+    2,112,10,45,5
+  ]
+},
+
+{
+  id: "office_math_2025_03_g2",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고2",
+  subject: "수학",
+  year: 2025,
+  month: 3,
+  paperType: "공통",
+  selectedSubject: "없음",
+  answers: [
+    4,3,5,1,2,
+    3,4,1,5,2,
+    4,2,5,1,3,
+    5,1,4,2,3,
+    2,14,145,185,12,
+    11,3,8,38,68
+  ]
+},
+
+{
+  id: "office_math_2025_10_g1",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고1",
+  subject: "수학",
+  year: 2025,
+  month: 10,
+  paperType: "공통",
+  selectedSubject: "없음",
+  answers: [
+    4,2,3,1,1,
+    2,5,3,5,4,
+    1,4,3,4,2,
+    5,4,2,5,3,
+    1,2,13,6,144,
+    18,20,40,133,16
+  ]
+},
+
+{
+  id: "office_math_2025_09_g1",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고1",
+  subject: "수학",
+  year: 2025,
+  month: 9,
+  paperType: "공통",
+  selectedSubject: "없음",
+  answers: [
+    3,5,2,1,5,
+    3,4,4,2,2,
+    1,3,1,3,4,
+    2,5,4,1,3,
+    5,28,21,3,6,
+    88,16,12,720,163
+  ]
+},
+
+{
+  id: "office_math_2025_06_g1",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고1",
+  subject: "수학",
+  year: 2025,
+  month: 6,
+  paperType: "공통",
+  selectedSubject: "없음",
+  answers: [
+    3,5,1,3,3,
+    5,4,3,2,4,
+    2,1,2,5,2,
+    3,1,2,4,2,
+    1,17,3,270,7,
+    21,23,8,65,114
+  ]
+},
+
+{
+  id: "office_math_2025_03_g1",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고1",
+  subject: "수학",
+  year: 2025,
+  month: 3,
+  paperType: "공통",
+  selectedSubject: "없음",
+  answers: [
+    4,2,2,4,3,
+    5,3,2,5,4,
+    5,5,1,2,4,
+    1,3,2,1,1,
+    5,13,3,20,134,
+    68,42,37,121,64
+  ]
 }
 
 ];
