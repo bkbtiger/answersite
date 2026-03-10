@@ -1,4 +1,4 @@
-const providerEl = document.getElementById("provider");
+ï»¿const providerEl = document.getElementById("provider");
 const gradeEl = document.getElementById("grade");
 const subjectEl = document.getElementById("subject");
 const yearEl = document.getElementById("year");
@@ -20,32 +20,32 @@ const metaDescriptionEl = document.getElementById("metaDescription");
 const ogTitleEl = document.getElementById("ogTitle");
 const ogDescriptionEl = document.getElementById("ogDescription");
 
-const TXT_SELECT = "¼±ÅÃ";
-const TXT_COMMON = "°øÅë";
-const TXT_NONE = "¾øÀ½";
+const TXT_SELECT = "ì„ íƒ";
+const TXT_COMMON = "ê³µí†µ";
+const TXT_NONE = "ì—†ìŒ";
 
-const VAL_KICE = "Æò°¡¿ø";
-const VAL_OFFICE = "±³À°Ã»";
-const VAL_CSAT = "¼ö´É";
-const VAL_MOCK_KICE = "¸ğÀÇÆò°¡";
-const VAL_MOCK_OFFICE = "¸ğÀÇ°í»ç";
+const VAL_KICE = "í‰ê°€ì›";
+const VAL_OFFICE = "êµìœ¡ì²­";
+const VAL_CSAT = "ìˆ˜ëŠ¥";
+const VAL_MOCK_KICE = "ëª¨ì˜í‰ê°€";
+const VAL_MOCK_OFFICE = "ëª¨ì˜ê³ ì‚¬";
 
-const VAL_KOR = "±¹¾î";
-const VAL_MATH = "¼öÇĞ";
-const VAL_ENG = "¿µ¾î";
+const VAL_KOR = "êµ­ì–´";
+const VAL_MATH = "ìˆ˜í•™";
+const VAL_ENG = "ì˜ì–´";
 
-const VAL_ODD = "È¦¼öÇü";
-const VAL_EVEN = "Â¦¼öÇü";
+const VAL_ODD = "í™€ìˆ˜í˜•";
+const VAL_EVEN = "ì§ìˆ˜í˜•";
 
-const VAL_HW = "È­¹ı°ú ÀÛ¹®";
-const VAL_LM = "¾ğ¾î¿Í ¸ÅÃ¼";
-const VAL_PROB = "È®·ü°ú Åë°è";
-const VAL_CALC = "¹ÌÀûºĞ";
-const VAL_GEO = "±âÇÏ";
+const VAL_HW = "í™”ë²•ê³¼ ì‘ë¬¸";
+const VAL_LM = "ì–¸ì–´ì™€ ë§¤ì²´";
+const VAL_PROB = "í™•ë¥ ê³¼ í†µê³„";
+const VAL_CALC = "ë¯¸ì ë¶„";
+const VAL_GEO = "ê¸°í•˜";
 
-const DEFAULT_TITLE = "¸ğÀÇ°í»ç ´äÁö »çÀÌÆ®";
-const DEFAULT_SUBTITLE = "Æò°¡¿ø ¡¤ ±³À°Ã» ±âÃâ¹®Á¦ Á¤´ä Á¶È¸";
-const DEFAULT_DESC = "Æò°¡¿ø°ú ±³À°Ã» ±âÃâ¹®Á¦ Á¤´äÀ» °ú¸ñ, ÇĞ³â, ½ÃÇà³âµµ, ½ÃÇà¿ùº°·Î È®ÀÎÇÒ ¼ö ÀÖ´Â »çÀÌÆ®";
+const DEFAULT_TITLE = "ëª¨ì˜ê³ ì‚¬ ë‹µì§€ ì‚¬ì´íŠ¸";
+const DEFAULT_SUBTITLE = "í‰ê°€ì› Â· êµìœ¡ì²­ ê¸°ì¶œë¬¸ì œ ì •ë‹µ ì¡°íšŒ";
+const DEFAULT_DESC = "í‰ê°€ì›ê³¼ êµìœ¡ì²­ ê¸°ì¶œë¬¸ì œ ì •ë‹µì„ ê³¼ëª©, í•™ë…„, ì‹œí–‰ë…„ë„, ì‹œí–‰ì›”ë³„ë¡œ í™•ì¸í•  ìˆ˜ ìˆëŠ” ì‚¬ì´íŠ¸";
 
 function uniqueValues(arr, key) {
   return [...new Set(arr.map(item => item[key]).filter(v => v !== undefined && v !== null))];
@@ -214,50 +214,50 @@ function createAnswerTables(answers, itemsPerRow = 5) {
 
 function getExamTitle(exam) {
   if (exam.provider === VAL_KICE && exam.examType === VAL_CSAT) {
-    return `${exam.year}ÇĞ³âµµ ´ëÇĞ¼öÇĞ´É·Â½ÃÇè ${exam.subject} Á¤´ä`;
+    return `${exam.year}í•™ë…„ë„ ëŒ€í•™ìˆ˜í•™ëŠ¥ë ¥ì‹œí—˜ ${exam.subject} ì •ë‹µ`;
   }
 
   if (exam.provider === VAL_KICE && exam.examType === VAL_MOCK_KICE) {
-    return `${exam.year}³â ${exam.month}¿ù ${VAL_KICE} ${exam.grade} ${exam.subject} Á¤´ä`;
+    return `${exam.year}ë…„ ${exam.month}ì›” ${VAL_KICE} ${exam.grade} ${exam.subject} ì •ë‹µ`;
   }
 
   if (exam.provider === VAL_OFFICE && exam.examType === VAL_MOCK_OFFICE) {
-    return `${exam.year}³â ${exam.month}¿ù ${VAL_OFFICE} ${exam.grade} ${exam.subject} Á¤´ä`;
+    return `${exam.year}ë…„ ${exam.month}ì›” ${VAL_OFFICE} ${exam.grade} ${exam.subject} ì •ë‹µ`;
   }
 
-  return `${exam.year}³â ${exam.month}¿ù ${exam.provider} ${exam.subject} Á¤´ä`;
+  return `${exam.year}ë…„ ${exam.month}ì›” ${exam.provider} ${exam.subject} ì •ë‹µ`;
 }
 
 function getExamSubtitle(exam) {
   const parts = [
-    `±â°ü: ${exam.provider}`,
-    `½ÃÇè: ${exam.examType}`,
-    `ÇĞ³â: ${exam.grade}`,
-    `°ú¸ñ: ${exam.subject}`
+    `ê¸°ê´€: ${exam.provider}`,
+    `ì‹œí—˜: ${exam.examType}`,
+    `í•™ë…„: ${exam.grade}`,
+    `ê³¼ëª©: ${exam.subject}`
   ];
 
   if (exam.paperType && exam.paperType !== TXT_COMMON) {
-    parts.push(`À¯Çü: ${exam.paperType}`);
+    parts.push(`ìœ í˜•: ${exam.paperType}`);
   }
 
   if (exam.selectedSubject && exam.selectedSubject !== TXT_NONE && exam.selectedSubject !== TXT_COMMON) {
-    parts.push(`¼±ÅÃ°ú¸ñ: ${exam.selectedSubject}`);
+    parts.push(`ì„ íƒê³¼ëª©: ${exam.selectedSubject}`);
   }
 
-  return parts.join(" ¡¤ ");
+  return parts.join(" Â· ");
 }
 
 function getSeoTitle(exam) {
   let title = "";
 
   if (exam.provider === VAL_KICE && exam.examType === VAL_CSAT) {
-    title = `${exam.year}ÇĞ³âµµ ¼ö´É ${exam.subject}`;
+    title = `${exam.year}í•™ë…„ë„ ìˆ˜ëŠ¥ ${exam.subject}`;
   } else if (exam.provider === VAL_KICE && exam.examType === VAL_MOCK_KICE) {
-    title = `${exam.year}³â ${exam.month}¿ù ${VAL_KICE} ${exam.grade} ${exam.subject}`;
+    title = `${exam.year}ë…„ ${exam.month}ì›” ${VAL_KICE} ${exam.grade} ${exam.subject}`;
   } else if (exam.provider === VAL_OFFICE) {
-    title = `${exam.year}³â ${exam.month}¿ù ${VAL_OFFICE} ${exam.grade} ${exam.subject}`;
+    title = `${exam.year}ë…„ ${exam.month}ì›” ${VAL_OFFICE} ${exam.grade} ${exam.subject}`;
   } else {
-    title = `${exam.year}³â ${exam.month}¿ù ${exam.subject}`;
+    title = `${exam.year}ë…„ ${exam.month}ì›” ${exam.subject}`;
   }
 
   if (exam.paperType && exam.paperType !== TXT_COMMON) {
@@ -268,7 +268,7 @@ function getSeoTitle(exam) {
     title += ` ${exam.selectedSubject}`;
   }
 
-  title += ` Á¤´ä | ${DEFAULT_TITLE}`;
+  title += ` ì •ë‹µ | ${DEFAULT_TITLE}`;
   return title;
 }
 
@@ -283,7 +283,7 @@ function getSeoDescription(exam) {
     desc += ` ${exam.selectedSubject}`;
   }
 
-  desc += ` Á¤´äÇ¥ÀÔ´Ï´Ù.`;
+  desc += ` ì •ë‹µí‘œì…ë‹ˆë‹¤.`;
   return desc;
 }
 
@@ -375,14 +375,14 @@ function renderResult(exam) {
       <span>${exam.examType}</span>
       <span>${exam.grade}</span>
       <span>${exam.subject}</span>
-      <span>${exam.year}³â</span>
-      <span>${exam.month}¿ù</span>
+      <span>${exam.year}ë…„</span>
+      <span>${exam.month}ì›”</span>
       ${exam.paperType && exam.paperType !== TXT_COMMON ? `<span>${exam.paperType}</span>` : ""}
       ${exam.selectedSubject && exam.selectedSubject !== TXT_NONE && exam.selectedSubject !== TXT_COMMON ? `<span>${exam.selectedSubject}</span>` : ""}
     </div>
 
     <div class="answer-section">
-      <h3>Á¤´äÇ¥</h3>
+      <h3>ì •ë‹µí‘œ</h3>
       <div class="answer-grid">
         ${answerTables}
       </div>
@@ -444,24 +444,24 @@ function searchExam() {
   const selectedSubjectVisible = !selectedSubjectFieldEl.classList.contains("hidden");
 
   if (!provider || !grade || !subject || !year || !month) {
-    renderError("±â°ü, ÇĞ³â, °ú¸ñ, ½ÃÇà³âµµ, ½ÃÇà¿ùÀ» ¸ğµÎ ¼±ÅÃÇØ ÁÖ¼¼¿ä.");
+    renderError("ê¸°ê´€, í•™ë…„, ê³¼ëª©, ì‹œí–‰ë…„ë„, ì‹œí–‰ì›”ì„ ëª¨ë‘ ì„ íƒí•´ ì£¼ì„¸ìš”.");
     return;
   }
 
   if (paperTypeVisible && !paperTypeEl.value) {
-    renderError("À¯ÇüÀ» ¼±ÅÃÇØ ÁÖ¼¼¿ä.");
+    renderError("ìœ í˜•ì„ ì„ íƒí•´ ì£¼ì„¸ìš”.");
     return;
   }
 
   if (selectedSubjectVisible && !selectedSubjectEl.value) {
-    renderError("¼±ÅÃ°ú¸ñÀ» ¼±ÅÃÇØ ÁÖ¼¼¿ä.");
+    renderError("ì„ íƒê³¼ëª©ì„ ì„ íƒí•´ ì£¼ì„¸ìš”.");
     return;
   }
 
   const matchedExam = getMatchedExamFromCurrentSelection();
 
   if (!matchedExam) {
-    renderError("ÇØ´ç Á¶°ÇÀÇ ½ÃÇè µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù.");
+    renderError("í•´ë‹¹ ì¡°ê±´ì˜ ì‹œí—˜ ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤.");
     return;
   }
 
@@ -575,16 +575,16 @@ async function copyShareUrl() {
 
   try {
     await navigator.clipboard.writeText(shareUrlEl.value);
-    copyUrlBtnEl.textContent = "º¹»ç ¿Ï·á";
+    copyUrlBtnEl.textContent = "ë³µì‚¬ ì™„ë£Œ";
     setTimeout(() => {
-      copyUrlBtnEl.textContent = "¸µÅ© º¹»ç";
+      copyUrlBtnEl.textContent = "ë§í¬ ë³µì‚¬";
     }, 1200);
   } catch (error) {
     shareUrlEl.select();
     document.execCommand("copy");
-    copyUrlBtnEl.textContent = "º¹»ç ¿Ï·á";
+    copyUrlBtnEl.textContent = "ë³µì‚¬ ì™„ë£Œ";
     setTimeout(() => {
-      copyUrlBtnEl.textContent = "¸µÅ© º¹»ç";
+      copyUrlBtnEl.textContent = "ë§í¬ ë³µì‚¬";
     }, 1200);
   }
 }
