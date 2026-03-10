@@ -3,15 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>모의고사 답지 사이트</title>
-  <meta name="description" content="평가원과 교육청 기출문제 정답을 과목, 학년, 시행년도, 시행월별로 확인할 수 있는 사이트" />
+  <meta
+    id="metaDescription"
+    name="description"
+    content="평가원과 교육청 기출문제 정답을 과목, 학년, 시행년도, 시행월별로 확인할 수 있는 사이트"
+  />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" id="ogTitle" content="모의고사 답지 사이트" />
+  <meta
+    property="og:description"
+    id="ogDescription"
+    content="평가원과 교육청 기출문제 정답을 과목, 학년, 시행년도, 시행월별로 확인할 수 있는 사이트"
+  />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <header class="header">
-      <h1>모의고사 답지 사이트</h1>
-      <p>평가원 · 교육청 기출문제 정답 조회</p>
+      <h1 id="siteTitle">모의고사 답지 사이트</h1>
+      <p id="siteSubtitle">평가원 · 교육청 기출문제 정답 조회</p>
     </header>
 
     <section class="card">
@@ -69,6 +84,17 @@
           <label>&nbsp;</label>
           <button id="searchBtn">검색</button>
         </div>
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="seo-title">바로가기 링크</h2>
+      <p class="seo-desc">
+        검색 후 생성되는 링크를 복사해서 공유하거나 저장할 수 있습니다.
+      </p>
+      <div class="share-box">
+        <input id="shareUrl" type="text" readonly placeholder="검색 후 시험별 링크가 여기에 생성됩니다." />
+        <button id="copyUrlBtn" type="button">링크 복사</button>
       </div>
     </section>
 

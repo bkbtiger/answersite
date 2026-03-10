@@ -218,3 +218,61 @@ td {
     font-size: 22px;
   }
 }
+.seo-card {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.seo-title {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.seo-desc {
+  margin: 0 0 14px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.share-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.share-box input {
+  flex: 1;
+  height: 46px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  padding: 0 14px;
+  font-size: 14px;
+  background: #fff;
+}
+
+.share-box button {
+  height: 46px;
+  border: none;
+  border-radius: 12px;
+  padding: 0 16px;
+  background: #111827;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.share-box button:hover {
+  opacity: 0.92;
+}
+
+@media (max-width: 640px) {
+  .share-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .share-box button {
+    width: 100%;
+  }
+}
