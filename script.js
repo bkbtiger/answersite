@@ -229,15 +229,14 @@ function getExamTitle(exam) {
 }
 
 function getExamBadge(exam) {
-
   if (exam.provider === VAL_KICE && exam.examType === VAL_MOCK_KICE) {
     const nextYear = (exam.year + 1) % 100;
     return `<span class="exam-badge">${nextYear}수능 대비</span>`;
   }
 
   if (exam.provider === VAL_KICE && exam.examType === VAL_CSAT) {
-    const year = (exam.year + 1) % 100;
-    return `<span class="exam-badge">${nextYear} 수능</span>`;
+    const nextYear = (exam.year + 1) % 100;
+    return `<span class="exam-badge">${nextYear}수능</span>`;
   }
 
   return "";
