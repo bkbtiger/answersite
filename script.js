@@ -632,3 +632,43 @@ copyUrlBtnEl.addEventListener("click", copyShareUrl);
 
 updateSelectOptions();
 applyPathOrQuery();
+
+function validateExamData() {
+  const idSet = new Set();
+
+  examData.forEach((exam, index) => {
+
+    if (!exam.id) console.error("id 없음", exam);
+    if (!exam.provider) console.error("provider 없음", exam);
+    if (!exam.examType) console.error("examType 없음", exam);
+    if (!exam.grade) console.error("grade 없음", exam);
+    if (!exam.subject) console.error("subject 없음", exam);
+    if (!exam.year) console.error("year 없음", exam);
+    if (!exam.month) console.error("month 없음", exam);
+
+    if (!Array.isArray(exam.answers)) {
+      console.error("answers 배열 아님", exam);
+    }
+
+    if (exam.subject === "국어" || exam.subject === "영어") {
+      if (exam.answers.length !== 45) {
+        console.error("문항 수 오류 (45 아님)", exam);
+      }
+    }
+
+    if (exam.subject === "수학") {
+      if (exam.answers.length !== 30) {
+        console.error("문항 수 오류 (30 아님)", exam);
+      }
+    }
+
+    if (idSet.has(exam.id)) {
+      console.error("id 중복", exam.id);
+    }
+
+    idSet.add(exam.id);
+
+  });
+
+  console.log("데이터 검사 완료");
+}
