@@ -236,8 +236,8 @@ function getExamBadge(exam) {
   }
 
   if (exam.provider === VAL_KICE && exam.examType === VAL_CSAT) {
-    const year = exam.year % 100;
-    return `<span class="exam-badge">${year} 수능</span>`;
+    const year = (exam.year + 1) % 100;
+    return `<span class="exam-badge">${nextYear} 수능</span>`;
   }
 
   return "";
