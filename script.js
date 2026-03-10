@@ -413,9 +413,25 @@ function renderError(message) {
 }
 
 function updateUrl(exam) {
-  const prettyUrl = `${window.location.origin}/answer/${createExamSlug(exam)}`;
-  history.replaceState(null, "", prettyUrl);
-  shareUrlEl.value = prettyUrl;
+  const params = new URLSearchParams({
+    provider: exam.provider,
+    grade: exam.grade,
+    subject: exam.subject,
+    year: String(exam.year),
+    month: String(exam.month)
+  });
+
+  if (exam.paperType && exam.paperType !== TXT_COMMON) {
+    params.set("paperType", exam.paperType);
+  }
+
+  if (exam.selectedSubject && exam.selectedSubject !== TXT_NONE && exam.selectedSubject !== TXT_COMMON) {
+    params.set("selectedSubject", exam.selectedSubject);
+  }
+
+  const url = `${window.location.origin}/?${params.toString()}`;
+  history.replaceState(null, "", url);
+  shareUrlEl.value = url;
 }
 
 function getMatchedExamFromCurrentSelection() {
