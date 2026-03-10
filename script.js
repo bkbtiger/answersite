@@ -353,19 +353,32 @@ function selectedSubjectToSlug(selectedSubject) {
   return "";
 }
 
+function gradeToSlug(grade) {
+  if (grade === "고1") return "g1";
+  if (grade === "고2") return "g2";
+  if (grade === "고3") return "g3";
+  return grade.toLowerCase();
+}
+
 function createExamSlug(exam) {
   const parts = [
     providerToSlug(exam.provider),
     String(exam.year),
     String(exam.month).padStart(2, "0"),
-    subjectToSlug(exam.subject)
+    subjectToSlug(exam.subject),
+    gradeToSlug(exam.grade)
   ];
 
   if (exam.paperType && exam.paperType !== TXT_COMMON) {
-    parts.push(paperTypeToSlug(exam.paperType));
+    const paperSlug = paperTypeToSlug(exam.paperType);
+    if (paperSlug) parts.push(paperSlug);
   }
 
-  if (exam.selectedSubject && exam.selectedSubject !== TXT_NONE && exam.selectedSubject !== TXT_COMMON) {
+  if (
+    exam.selectedSubject &&
+    exam.selectedSubject !== TXT_NONE &&
+    exam.selectedSubject !== TXT_COMMON
+  ) {
     const selectedSlug = selectedSubjectToSlug(exam.selectedSubject);
     if (selectedSlug) parts.push(selectedSlug);
   }
@@ -413,24 +426,11 @@ function renderError(message) {
 }
 
 function updateUrl(exam) {
-  const params = new URLSearchParams({
-    provider: exam.provider,
-    grade: exam.grade,
-    subject: exam.subject,
-    year: String(exam.year),
-    month: String(exam.month)
-  });
+  const slug = createExamSlug(exam);
+  const path = `/answer/${slug}`;
+  const url = `${window.location.origin}${path}`;
 
-  if (exam.paperType && exam.paperType !== TXT_COMMON) {
-    params.set("paperType", exam.paperType);
-  }
-
-  if (exam.selectedSubject && exam.selectedSubject !== TXT_NONE && exam.selectedSubject !== TXT_COMMON) {
-    params.set("selectedSubject", exam.selectedSubject);
-  }
-
-  const url = `${window.location.origin}/?${params.toString()}`;
-  history.replaceState(null, "", url);
+  history.replaceState(null, "", path);
   shareUrlEl.value = url;
 }
 
