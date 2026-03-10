@@ -20,32 +20,32 @@ const metaDescriptionEl = document.getElementById("metaDescription");
 const ogTitleEl = document.getElementById("ogTitle");
 const ogDescriptionEl = document.getElementById("ogDescription");
 
-const TXT_SELECT = "\uC120\uD0DD";
-const TXT_COMMON = "\uACF5\uD1B5";
-const TXT_NONE = "\uC5C6\uC74C";
+const TXT_SELECT = "선택";
+const TXT_COMMON = "공통";
+const TXT_NONE = "없음";
 
-const VAL_KICE = "\uD3C9\uAC00\uC6D0";
-const VAL_OFFICE = "\uAD50\uC721\uCCAD";
-const VAL_CSAT = "\uC218\uB2A5";
-const VAL_MOCK_KICE = "\uBAA8\uC758\uD3C9\uAC00";
-const VAL_MOCK_OFFICE = "\uBAA8\uC758\uACE0\uC0AC";
+const VAL_KICE = "평가원";
+const VAL_OFFICE = "교육청";
+const VAL_CSAT = "수능";
+const VAL_MOCK_KICE = "모의평가";
+const VAL_MOCK_OFFICE = "모의고사";
 
-const VAL_KOR = "\uAD6D\uC5B4";
-const VAL_MATH = "\uC218\uD559";
-const VAL_ENG = "\uC601\uC5B4";
+const VAL_KOR = "국어";
+const VAL_MATH = "수학";
+const VAL_ENG = "영어";
 
-const VAL_ODD = "\uD640\uC218\uD615";
-const VAL_EVEN = "\uC9DD\uC218\uD615";
+const VAL_ODD = "홀수형";
+const VAL_EVEN = "짝수형";
 
-const VAL_HW = "\uD654\uBC95\uACFC \uC791\uBB38";
-const VAL_LM = "\uC5B8\uC5B4\uC640 \uB9E4\uCCB4";
-const VAL_PROB = "\uD655\uB960\uACFC \uD1B5\uACC4";
-const VAL_CALC = "\uBBF8\uC801\uBD84";
-const VAL_GEO = "\uAE30\uD558";
+const VAL_HW = "화법과 작문";
+const VAL_LM = "언어와 매체";
+const VAL_PROB = "확률과 통계";
+const VAL_CALC = "미적분";
+const VAL_GEO = "기하";
 
-const DEFAULT_TITLE = "\uBAA8\uC758\uACE0\uC0AC \uB2F5\uC9C0 \uC0AC\uC774\uD2B8";
-const DEFAULT_SUBTITLE = "\uD3C9\uAC00\uC6D0 \u00B7 \uAD50\uC721\uCCAD \uAE30\uCD9C\uBB38\uC81C \uC815\uB2F5 \uC870\uD68C";
-const DEFAULT_DESC = "\uD3C9\uAC00\uC6D0\uACFC \uAD50\uC721\uCCAD \uAE30\uCD9C\uBB38\uC81C \uC815\uB2F5\uC744 \uACFC\uBAA9, \uD559\uB144, \uC2DC\uD589\uB144\uB3C4, \uC2DC\uD589\uC6D4\uBCC4\uB85C \uD655\uC778\uD560 \uC218 \uC788\uB294 \uC0AC\uC774\uD2B8";
+const DEFAULT_TITLE = "모의고사 답지 사이트";
+const DEFAULT_SUBTITLE = "평가원 · 교육청 기출문제 정답 조회";
+const DEFAULT_DESC = "평가원과 교육청 기출문제 정답을 과목, 학년, 시행년도, 시행월별로 확인할 수 있는 사이트";
 
 function uniqueValues(arr, key) {
   return [...new Set(arr.map(item => item[key]).filter(v => v !== undefined && v !== null))];
@@ -214,50 +214,50 @@ function createAnswerTables(answers, itemsPerRow = 5) {
 
 function getExamTitle(exam) {
   if (exam.provider === VAL_KICE && exam.examType === VAL_CSAT) {
-    return `${exam.year}\uD559\uB144\uB3C4 \uB300\uD559\uC218\uD559\uB2A5\uB825\uC2DC\uD5D8 ${exam.subject} \uC815\uB2F5`;
+    return `${exam.year}학년도 대학수학능력시험 ${exam.subject} 정답`;
   }
 
   if (exam.provider === VAL_KICE && exam.examType === VAL_MOCK_KICE) {
-    return `${exam.year}\uB144 ${exam.month}\uC6D4 ${VAL_KICE} ${exam.grade} ${exam.subject} \uC815\uB2F5`;
+    return `${exam.year}년 ${exam.month}월 ${VAL_KICE} ${exam.grade} ${exam.subject} 정답`;
   }
 
   if (exam.provider === VAL_OFFICE && exam.examType === VAL_MOCK_OFFICE) {
-    return `${exam.year}\uB144 ${exam.month}\uC6D4 ${VAL_OFFICE} ${exam.grade} ${exam.subject} \uC815\uB2F5`;
+    return `${exam.year}년 ${exam.month}월 ${VAL_OFFICE} ${exam.grade} ${exam.subject} 정답`;
   }
 
-  return `${exam.year}\uB144 ${exam.month}\uC6D4 ${exam.provider} ${exam.subject} \uC815\uB2F5`;
+  return `${exam.year}년 ${exam.month}월 ${exam.provider} ${exam.subject} 정답`;
 }
 
 function getExamSubtitle(exam) {
   const parts = [
-    `\uAE30\uAD00: ${exam.provider}`,
-    `\uC2DC\uD5D8: ${exam.examType}`,
-    `\uD559\uB144: ${exam.grade}`,
-    `\uACFC\uBAA9: ${exam.subject}`
+    `기관: ${exam.provider}`,
+    `시험: ${exam.examType}`,
+    `학년: ${exam.grade}`,
+    `과목: ${exam.subject}`
   ];
 
   if (exam.paperType && exam.paperType !== TXT_COMMON) {
-    parts.push(`\uC720\uD615: ${exam.paperType}`);
+    parts.push(`유형: ${exam.paperType}`);
   }
 
   if (exam.selectedSubject && exam.selectedSubject !== TXT_NONE && exam.selectedSubject !== TXT_COMMON) {
-    parts.push(`\uC120\uD0DD\uACFC\uBAA9: ${exam.selectedSubject}`);
+    parts.push(`선택과목: ${exam.selectedSubject}`);
   }
 
-  return parts.join(" \u00B7 ");
+  return parts.join(" · ");
 }
 
 function getSeoTitle(exam) {
   let title = "";
 
   if (exam.provider === VAL_KICE && exam.examType === VAL_CSAT) {
-    title = `${exam.year}\uD559\uB144\uB3C4 \uC218\uB2A5 ${exam.subject}`;
+    title = `${exam.year}학년도 수능 ${exam.subject}`;
   } else if (exam.provider === VAL_KICE && exam.examType === VAL_MOCK_KICE) {
-    title = `${exam.year}\uB144 ${exam.month}\uC6D4 ${VAL_KICE} ${exam.grade} ${exam.subject}`;
+    title = `${exam.year}년 ${exam.month}월 ${VAL_KICE} ${exam.grade} ${exam.subject}`;
   } else if (exam.provider === VAL_OFFICE) {
-    title = `${exam.year}\uB144 ${exam.month}\uC6D4 ${VAL_OFFICE} ${exam.grade} ${exam.subject}`;
+    title = `${exam.year}년 ${exam.month}월 ${VAL_OFFICE} ${exam.grade} ${exam.subject}`;
   } else {
-    title = `${exam.year}\uB144 ${exam.month}\uC6D4 ${exam.subject}`;
+    title = `${exam.year}년 ${exam.month}월 ${exam.subject}`;
   }
 
   if (exam.paperType && exam.paperType !== TXT_COMMON) {
@@ -268,7 +268,7 @@ function getSeoTitle(exam) {
     title += ` ${exam.selectedSubject}`;
   }
 
-  title += ` \uC815\uB2F5 | ${DEFAULT_TITLE}`;
+  title += ` 정답 | ${DEFAULT_TITLE}`;
   return title;
 }
 
@@ -283,7 +283,7 @@ function getSeoDescription(exam) {
     desc += ` ${exam.selectedSubject}`;
   }
 
-  desc += ` \uC815\uB2F5\uD45C\uC785\uB2C8\uB2E4.`;
+  desc += ` 정답표입니다.`;
   return desc;
 }
 
@@ -375,14 +375,14 @@ function renderResult(exam) {
       <span>${exam.examType}</span>
       <span>${exam.grade}</span>
       <span>${exam.subject}</span>
-      <span>${exam.year}\uB144</span>
-      <span>${exam.month}\uC6D4</span>
+      <span>${exam.year}년</span>
+      <span>${exam.month}월</span>
       ${exam.paperType && exam.paperType !== TXT_COMMON ? `<span>${exam.paperType}</span>` : ""}
       ${exam.selectedSubject && exam.selectedSubject !== TXT_NONE && exam.selectedSubject !== TXT_COMMON ? `<span>${exam.selectedSubject}</span>` : ""}
     </div>
 
     <div class="answer-section">
-      <h3>\uC815\uB2F5\uD45C</h3>
+      <h3>정답표</h3>
       <div class="answer-grid">
         ${answerTables}
       </div>
@@ -444,24 +444,24 @@ function searchExam() {
   const selectedSubjectVisible = !selectedSubjectFieldEl.classList.contains("hidden");
 
   if (!provider || !grade || !subject || !year || !month) {
-    renderError("\uAE30\uAD00, \uD559\uB144, \uACFC\uBAA9, \uC2DC\uD589\uB144\uB3C4, \uC2DC\uD589\uC6D4\uC744 \uBAA8\uB450 \uC120\uD0DD\uD574 \uC8FC\uC138\uC694.");
+    renderError("기관, 학년, 과목, 시행년도, 시행월을 모두 선택해 주세요.");
     return;
   }
 
   if (paperTypeVisible && !paperTypeEl.value) {
-    renderError("\uC720\uD615\uC744 \uC120\uD0DD\uD574 \uC8FC\uC138\uC694.");
+    renderError("유형을 선택해 주세요.");
     return;
   }
 
   if (selectedSubjectVisible && !selectedSubjectEl.value) {
-    renderError("\uC120\uD0DD\uACFC\uBAA9\uC744 \uC120\uD0DD\uD574 \uC8FC\uC138\uC694.");
+    renderError("선택과목을 선택해 주세요.");
     return;
   }
 
   const matchedExam = getMatchedExamFromCurrentSelection();
 
   if (!matchedExam) {
-    renderError("\uD574\uB2F9 \uC870\uAC74\uC758 \uC2DC\uD5D8 \uB370\uC774\uD130\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.");
+    renderError("해당 조건의 시험 데이터가 없습니다.");
     return;
   }
 
@@ -575,16 +575,16 @@ async function copyShareUrl() {
 
   try {
     await navigator.clipboard.writeText(shareUrlEl.value);
-    copyUrlBtnEl.textContent = "\uBCF5\uC0AC \uC644\uB8CC";
+    copyUrlBtnEl.textContent = "복사 완료";
     setTimeout(() => {
-      copyUrlBtnEl.textContent = "\uB9C1\uD06C \uBCF5\uC0AC";
+      copyUrlBtnEl.textContent = "링크 복사";
     }, 1200);
   } catch (error) {
     shareUrlEl.select();
     document.execCommand("copy");
-    copyUrlBtnEl.textContent = "\uBCF5\uC0AC \uC644\uB8CC";
+    copyUrlBtnEl.textContent = "복사 완료";
     setTimeout(() => {
-      copyUrlBtnEl.textContent = "\uB9C1\uD06C \uBCF5\uC0AC";
+      copyUrlBtnEl.textContent = "링크 복사";
     }, 1200);
   }
 }
