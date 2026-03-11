@@ -301,30 +301,6 @@ function getSeoDescription(exam) {
   return desc;
 }
 
-function updateStructuredData(exam = null) {
-  const el = document.getElementById("structuredData");
-  if (!el) return;
-
-  if (!exam) {
-    el.textContent = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      name: DEFAULT_TITLE,
-      url: `${window.location.origin}/`,
-      description: DEFAULT_DESC
-    });
-    return;
-  }
-
-  el.textContent = JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: getSeoTitle(exam),
-    url: `${window.location.origin}/answer/${createExamSlug(exam)}`,
-    description: getSeoDescription(exam)
-  });
-}
-
 function updateSeo(exam = null) {
   if (!exam) {
     document.title = DEFAULT_TITLE;
@@ -334,8 +310,6 @@ function updateSeo(exam = null) {
 
     siteTitleEl.textContent = DEFAULT_TITLE;
     siteSubtitleEl.textContent = DEFAULT_SUBTITLE;
-
-    updateStructuredData(null);
     return;
   }
 
@@ -349,8 +323,6 @@ function updateSeo(exam = null) {
 
   siteTitleEl.textContent = getExamTitle(exam);
   siteSubtitleEl.textContent = getExamSubtitle(exam);
-
-  updateStructuredData(exam);
 }
 
 function providerToSlug(provider) {
@@ -648,6 +620,19 @@ async function copyShareUrl() {
   }
 }
 
+providerEl.addEventListener("change", updateSelectOptions);
+gradeEl.addEventListener("change", updateSelectOptions);
+subjectEl.addEventListener("change", updateSelectOptions);
+yearEl.addEventListener("change", updateSelectOptions);
+monthEl.addEventListener("change", updateSelectOptions);
+paperTypeEl.addEventListener("change", updateSelectOptions);
+selectedSubjectEl.addEventListener("change", updateSelectOptions);
+searchBtnEl.addEventListener("click", searchExam);
+copyUrlBtnEl.addEventListener("click", copyShareUrl);
+
+updateSelectOptions();
+applyPathOrQuery();
+
 function getExamLinkTitle(exam) {
   let title = getExamTitle(exam);
 
@@ -702,16 +687,4 @@ function renderExamLinks() {
   container.innerHTML = html;
 }
 
-providerEl.addEventListener("change", updateSelectOptions);
-gradeEl.addEventListener("change", updateSelectOptions);
-subjectEl.addEventListener("change", updateSelectOptions);
-yearEl.addEventListener("change", updateSelectOptions);
-monthEl.addEventListener("change", updateSelectOptions);
-paperTypeEl.addEventListener("change", updateSelectOptions);
-selectedSubjectEl.addEventListener("change", updateSelectOptions);
-searchBtnEl.addEventListener("click", searchExam);
-copyUrlBtnEl.addEventListener("click", copyShareUrl);
-
-updateSelectOptions();
-applyPathOrQuery();
 renderExamLinks();
