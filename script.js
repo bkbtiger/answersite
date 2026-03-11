@@ -633,19 +633,37 @@ copyUrlBtnEl.addEventListener("click", copyShareUrl);
 updateSelectOptions();
 applyPathOrQuery();
 
+function getExamLinkTitle(exam) {
+  let title = getExamTitle(exam);
+
+  if (exam.paperType && exam.paperType !== TXT_COMMON) {
+    title += ` ${exam.paperType}`;
+  }
+
+  if (
+    exam.selectedSubject &&
+    exam.selectedSubject !== TXT_NONE &&
+    exam.selectedSubject !== TXT_COMMON
+  ) {
+    title += ` ${exam.selectedSubject}`;
+  }
+
+  return title;
+}
+
 function renderExamLinks() {
   const container = document.getElementById("examLinksList");
   if (!container) return;
 
   const sorted = [...examData]
-    .sort((a,b)=>b.year-a.year||b.month-a.month)
-    .slice(0,100);
+    .sort((a, b) => b.year - a.year || b.month - a.month)
+    .slice(0, 100);
 
   let html = "";
 
   sorted.forEach(exam => {
     const slug = createExamSlug(exam);
-    const title = getExamTitle(exam);
+    const title = getExamLinkTitle(exam);
 
     html += `
       <div class="exam-link-item">
