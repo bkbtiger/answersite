@@ -648,7 +648,19 @@ function getExamLinkTitle(exam) {
     title += ` ${exam.selectedSubject}`;
   }
 
-  return title;
+  let badge = "";
+
+  if (exam.provider === VAL_KICE && exam.examType === VAL_MOCK_KICE) {
+    const nextYear = (exam.year + 1) % 100;
+    badge = `<span class="exam-badge-red">(${nextYear}수능 대비)</span>`;
+  }
+
+  if (exam.provider === VAL_KICE && exam.examType === VAL_CSAT) {
+    const nextYear = (exam.year + 1) % 100;
+    badge = `<span class="exam-badge-red">(${nextYear}수능)</span>`;
+  }
+
+  return title + " " + badge;
 }
 
 function renderExamLinks() {

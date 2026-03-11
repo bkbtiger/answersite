@@ -283,3 +283,9 @@ td {
   margin-left:10px;
   font-size:0.9em;
 }
+
+.exam-badge-red {
+  color: #e53935;
+  font-weight: 600;
+  margin-left: 6px;
+}
