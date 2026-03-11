@@ -355,12 +355,12 @@
 },
 
 {
-  id: "office_math_2026_05_prob",
+  id: "office_math_2025_05_prob",
   provider: "교육청",
   examType: "모의고사",
   grade: "고3",
   subject: "수학",
-  year: 2026,
+  year: 2025,
   month: 5,
   paperType: "공통",
   selectedSubject: "확률과 통계",
@@ -376,12 +376,12 @@
 },
 
 {
-  id: "office_math_2026_05_calc",
+  id: "office_math_2025_05_calc",
   provider: "교육청",
   examType: "모의고사",
   grade: "고3",
   subject: "수학",
-  year: 2026,
+  year: 2025,
   month: 5,
   paperType: "공통",
   selectedSubject: "미적분",
@@ -397,12 +397,12 @@
 },
 
 {
-  id: "office_math_2026_05_geo",
+  id: "office_math_2025_05_geo",
   provider: "교육청",
   examType: "모의고사",
   grade: "고3",
   subject: "수학",
-  year: 2026,
+  year: 2025,
   month: 5,
   paperType: "공통",
   selectedSubject: "기하",
