@@ -632,3 +632,29 @@ copyUrlBtnEl.addEventListener("click", copyShareUrl);
 
 updateSelectOptions();
 applyPathOrQuery();
+
+function renderExamLinks() {
+  const container = document.getElementById("examLinksList");
+  if (!container) return;
+
+  const sorted = [...examData]
+    .sort((a,b)=>b.year-a.year||b.month-a.month)
+    .slice(0,100);
+
+  let html = "";
+
+  sorted.forEach(exam => {
+    const slug = createExamSlug(exam);
+    const title = getExamTitle(exam);
+
+    html += `
+      <div class="exam-link-item">
+        <a href="/answer/${slug}">${title}</a>
+      </div>
+    `;
+  });
+
+  container.innerHTML = html;
+}
+
+renderExamLinks();
