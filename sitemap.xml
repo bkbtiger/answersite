@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+<pre id="xml"></pre>
+
+<script src="/data/kor.js"></script>
+<script src="/data/math.js"></script>
+<script src="/data/eng.js"></script>
+<script src="/data/data.js"></script>
+<script src="/script.js"></script>
+
+<script>
+
+const base = "https://answersite.pages.dev";
+
+let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+
+xml += `
+<url>
+<loc>${base}</loc>
+</url>
+`;
+
+examData.forEach(exam => {
+
+const slug = createExamSlug(exam);
+
+xml += `
+<url>
+<loc>${base}/answer/${slug}</loc>
+</url>
+`;
+
+});
+
+xml += `</urlset>`;
+
+document.body.innerText = xml;
+
+</script>
+
+</body>
+</html>
