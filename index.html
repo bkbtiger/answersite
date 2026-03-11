@@ -1,15 +1,15 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>&#47784;&#51032;&#44256;&#49324; &#45813;&#51648; &#49324;&#51060;&#53944;</title>
+  <title>모의고사 답지 사이트</title>
   <meta
     id="metaDescription"
     name="description"
-    content="&#54217;&#44032;&#50896;&#44284; &#44368;&#50977;&#52397; &#44592;&#52636;&#47928;&#51228; &#51221;&#45813;&#51012; &#44284;&#47785;, &#54617;&#45380;, &#49884;&#54665;&#45380;&#46020;, &#49884;&#54665;&#50900;&#48324;&#47196; &#54869;&#51064;&#54624; &#49688; &#51080;&#45716; &#49324;&#51060;&#53944;"
+    content="평가원과 교육청 기출문제 정답을 과목, 학년, 시행년도, 시행월별로 확인할 수 있는 사이트"
   />
   <meta name="robots" content="index, follow" />
 
@@ -17,12 +17,12 @@
   <meta
     property="og:title"
     id="ogTitle"
-    content="&#47784;&#51032;&#44256;&#49324; &#45813;&#51648; &#49324;&#51060;&#53944;"
+    content="모의고사 답지 사이트"
   />
   <meta
     property="og:description"
     id="ogDescription"
-    content="&#54217;&#44032;&#50896;&#44284; &#44368;&#50977;&#52397; &#44592;&#52636;&#47928;&#51228; &#51221;&#45813;&#51012; &#44284;&#47785;, &#54617;&#45380;, &#49884;&#54665;&#45380;&#46020;, &#49884;&#54665;&#50900;&#48324;&#47196; &#54869;&#51064;&#54624; &#49688; &#51080;&#45716; &#49324;&#51060;&#53944;"
+    content="평가원과 교육청 기출문제 정답을 과목, 학년, 시행년도, 시행월별로 확인할 수 있는 사이트"
   />
 
   <link rel="stylesheet" href="/style.css" />
@@ -30,97 +30,104 @@
 <body>
   <div class="container">
     <header class="header">
-      <h1 id="siteTitle">&#47784;&#51032;&#44256;&#49324; &#45813;&#51648; &#49324;&#51060;&#53944;</h1>
-      <p id="siteSubtitle">&#54217;&#44032;&#50896; &#183; &#44368;&#50977;&#52397; &#44592;&#52636;&#47928;&#51228; &#51221;&#45813; &#51312;&#54924;</p>
+      <h1 id="siteTitle">모의고사 답지 사이트</h1>
+      <p id="siteSubtitle">평가원 · 교육청 기출문제 정답 조회</p>
     </header>
 
     <section class="card">
       <div class="filter-grid">
         <div class="field">
-          <label for="provider">&#44592;&#44288;</label>
+          <label for="provider">기관</label>
           <select id="provider">
-            <option value="">&#49440;&#53469;</option>
+            <option value="">선택</option>
           </select>
         </div>
 
         <div class="field">
-          <label for="grade">&#54617;&#45380;</label>
+          <label for="grade">학년</label>
           <select id="grade">
-            <option value="">&#49440;&#53469;</option>
+            <option value="">선택</option>
           </select>
         </div>
 
         <div class="field">
-          <label for="subject">&#44284;&#47785;</label>
+          <label for="subject">과목</label>
           <select id="subject">
-            <option value="">&#49440;&#53469;</option>
+            <option value="">선택</option>
           </select>
         </div>
 
         <div class="field">
-          <label for="year">&#49884;&#54665;&#45380;&#46020;</label>
+          <label for="year">시행년도</label>
           <select id="year">
-            <option value="">&#49440;&#53469;</option>
+            <option value="">선택</option>
           </select>
         </div>
 
         <div class="field">
-          <label for="month">&#49884;&#54665;&#50900;</label>
+          <label for="month">시행월</label>
           <select id="month">
-            <option value="">&#49440;&#53469;</option>
+            <option value="">선택</option>
           </select>
         </div>
 
         <div class="field hidden" id="paperTypeField">
-          <label for="paperType">&#50976;&#54805;</label>
+          <label for="paperType">유형</label>
           <select id="paperType">
-            <option value="">&#49440;&#53469;</option>
+            <option value="">선택</option>
           </select>
         </div>
 
         <div class="field hidden" id="selectedSubjectField">
-          <label for="selectedSubject">&#49440;&#53469;&#44284;&#47785;</label>
+          <label for="selectedSubject">선택과목</label>
           <select id="selectedSubject">
-            <option value="">&#49440;&#53469;</option>
+            <option value="">선택</option>
           </select>
         </div>
 
         <div class="field button-field">
           <label>&nbsp;</label>
-          <button id="searchBtn">&#44160;&#49353;</button>
+          <button id="searchBtn">검색</button>
         </div>
       </div>
     </section>
 
     <section class="card seo-card">
-      <h2 class="seo-title">&#48148;&#47196;&#44032;&#44592; &#47553;&#53356;</h2>
+      <h2 class="seo-title">바로가기 링크</h2>
       <p class="seo-desc">
-        &#44160;&#49353; &#54980; &#49373;&#49457;&#46104;&#45716; &#47553;&#53356;&#47484; &#48373;&#49324;&#54644;&#49436; &#44277;&#50976;&#54616;&#44144;&#45208; &#51200;&#51109;&#54624; &#49688; &#51080;&#49845;&#45768;&#45796;.
+        검색 후 생성되는 링크를 복사해서 공유하거나 저장할 수 있습니다.
       </p>
       <div class="share-box">
         <input
           id="shareUrl"
           type="text"
           readonly
-          placeholder="&#44160;&#49353; &#54980; &#49884;&#54744;&#48324; &#47553;&#53356;&#44032; &#50668;&#44592;&#50640; &#49373;&#49457;&#46121;&#45768;&#45796;."
+          placeholder="검색 후 시험별 링크가 여기에 생성됩니다."
         />
-        <button id="copyUrlBtn" type="button">&#47553;&#53356; &#48373;&#49324;</button>
+        <button id="copyUrlBtn" type="button">링크 복사</button>
       </div>
     </section>
+
 
     <section class="card">
       <div id="resultArea">
         <div class="message info">
-          &#44592;&#44288;, &#54617;&#45380;, &#44284;&#47785;, &#49884;&#54665;&#45380;&#46020;, &#49884;&#54665;&#50900;&#51012; &#49440;&#53469;&#54620; &#46300; &#44160;&#49353;&#54616;&#49464;&#50836;.
+          기관, 학년, 과목, 시행년도, 시행월을 선택한 뒤 검색하세요.
         </div>
       </div>
+    </section>
+
+    <section class="card">
+      <h2>최근 시험 정답</h2>
+      <div id="examLinksList"></div>
     </section>
   </div>
 
   <script src="/data/kor.js"></script>
   <script src="/data/math.js"></script>
   <script src="/data/eng.js"></script>
-  <script src="/data.js"></script>
+
+  <script src="/data/data.js"></script>
   <script src="/script.js"></script>
 </body>
 </html>
