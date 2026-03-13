@@ -1261,6 +1261,598 @@
     2,6,15,126,32,
     578,153,29,9,91
   ]
+},
+
+{
+  id: "kice_math_2023_11_odd_prob",
+  provider: "평가원",
+  examType: "수능",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 11,
+  paperType: "홀수형",
+  selectedSubject: "확률과 통계",
+  answers: [
+    1,4,2,1,4,4,5,2,4,2,
+    1,3,1,1,3,2,8,9,32,25,
+    10,483,
+    3,4,5,2,2,4,196,673
+  ]
+},
+
+{
+  id: "kice_math_2023_11_odd_calc",
+  provider: "평가원",
+  examType: "수능",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 11,
+  paperType: "홀수형",
+  selectedSubject: "미적분",
+  answers: [
+    1,4,2,1,4,4,5,2,4,2,
+    1,3,1,1,3,2,8,9,32,25,
+    10,483,
+    3,2,4,3,1,2,162,125
+  ]
+},
+
+{
+  id: "kice_math_2023_11_odd_geo",
+  provider: "평가원",
+  examType: "수능",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 11,
+  paperType: "홀수형",
+  selectedSubject: "기하",
+  answers: [
+    1,4,2,1,4,4,5,2,4,2,
+    1,3,1,1,3,2,8,9,32,25,
+    10,483,
+    4,3,2,5,3,5,11,147
+  ]
+},
+
+{
+  id: "kice_math_2023_11_even_prob",
+  provider: "평가원",
+  examType: "수능",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 11,
+  paperType: "짝수형",
+  selectedSubject: "확률과 통계",
+  answers: [
+    1,4,2,1,4,2,5,4,4,2,
+    1,3,1,1,3,2,8,9,32,25,
+    10,483,
+    3,4,5,2,2,4,196,673
+  ]
+},
+
+{
+  id: "kice_math_2023_11_even_calc",
+  provider: "평가원",
+  examType: "수능",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 11,
+  paperType: "짝수형",
+  selectedSubject: "미적분",
+  answers: [
+    1,4,2,1,4,2,5,4,4,2,
+    1,3,1,1,3,2,8,9,32,25,
+    10,483,
+    3,2,4,3,1,2,162,125
+  ]
+},
+
+{
+  id: "kice_math_2023_11_even_geo",
+  provider: "평가원",
+  examType: "수능",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 11,
+  paperType: "짝수형",
+  selectedSubject: "기하",
+  answers: [
+    1,4,2,1,4,2,5,4,4,2,
+    1,3,1,1,3,2,8,9,32,25,
+    10,483,
+    4,3,2,5,3,5,11,147
+  ]
+},
+
+{
+  id: "office_math_2023_10_prob",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 10,
+  paperType: "공통",
+  selectedSubject: "확률과 통계",
+  answers: [
+    3,4,3,4,2,1,2,5,1,4,
+    1,5,2,3,2,10,22,110,102,24,
+    6,29,
+    2,4,5,3,1,1,64,5
+  ]
+},
+
+{
+  id: "office_math_2023_10_calc",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 10,
+  paperType: "공통",
+  selectedSubject: "미적분",
+  answers: [
+    3,4,3,4,2,1,2,5,1,4,
+    1,5,2,3,2,10,22,110,102,24,
+    6,29,
+    4,2,3,5,1,4,30,91
+  ]
+},
+
+{
+  id: "office_math_2023_10_geo",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 10,
+  paperType: "공통",
+  selectedSubject: "기하",
+  answers: [
+    3,4,3,4,2,1,2,5,1,4,
+    1,5,2,3,2,10,22,110,102,24,
+    6,29,
+    1,4,2,3,5,3,20,15
+  ]
+},
+
+{
+  id: "kice_math_2023_09_prob",
+  provider: "평가원",
+  examType: "모의평가",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 9,
+  paperType: "공통",
+  selectedSubject: "확률과 통계",
+  answers: [
+    5,3,2,1,5,3,4,4,3,3,
+    5,1,3,2,4,6,24,5,4,98,
+    19,10,
+    1,3,3,2,4,5,62,336
+  ]
+},
+
+{
+  id: "kice_math_2023_09_calc",
+  provider: "평가원",
+  examType: "모의평가",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 9,
+  paperType: "공통",
+  selectedSubject: "미적분",
+  answers: [
+    5,3,2,1,5,3,4,4,3,3,
+    5,1,3,2,4,6,24,5,4,98,
+    19,10,
+    4,2,2,5,1,2,18,32
+  ]
+},
+
+{
+  id: "kice_math_2023_09_geo",
+  provider: "평가원",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 9,
+  paperType: "공통",
+  selectedSubject: "기하",
+  answers: [
+    5,3,2,1,5,3,4,4,3,3,
+    5,1,3,2,4,6,24,5,4,98,
+    19,10,
+    4,1,5,2,3,1,17,27
+  ]
+},
+
+{
+  id: "office_math_2023_07_prob",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 7,
+  paperType: "공통",
+  selectedSubject: "확률과 통계",
+  answers: [
+    4,5,5,3,2,4,1,2,2,3,
+    1,3,1,5,4,9,20,65,22,54,
+    13,182,
+    3,1,2,4,5,1,24,150
+  ]
+},
+
+{
+  id: "office_math_2023_07_calc",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 7,
+  paperType: "공통",
+  selectedSubject: "미적분",
+  answers: [
+    4,5,5,3,2,4,1,2,2,3,
+    1,3,1,5,4,9,20,65,22,54,
+    13,182,
+    3,2,1,4,3,2,12,208
+  ]
+},
+
+{
+  id: "office_math_2023_07_geo",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 7,
+  paperType: "공통",
+  selectedSubject: "기하",
+  answers: [
+    4,5,5,3,2,4,1,2,2,3,
+    1,3,1,5,4,9,20,65,22,54,
+    13,182,
+    2,3,5,1,4,2,15,27
+  ]
+},
+
+{
+  id: "kice_math_2023_06_prob",
+  provider: "평가원",
+  examType: "모의평가",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 6,
+  paperType: "공통",
+  selectedSubject: "확률과 통계",
+  answers: [
+    5,4,2,2,1,4,3,3,1,2,
+    3,5,1,4,2,3,33,6,8,39,
+    110,380,
+    3,4,3,1,2,5,25,51
+  ]
+},
+
+{
+  id: "kice_math_2023_06_calc",
+  provider: "평가원",
+  examType: "모의평가",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 6,
+  paperType: "공통",
+  selectedSubject: "미적분",
+  answers: [
+    5,4,2,2,1,4,3,3,1,2,
+    3,5,1,4,2,3,33,6,8,39,
+    110,380,
+    5,4,1,2,3,2,5,24
+  ]
+},
+
+{
+  id: "kice_math_2023_06_geo",
+  provider: "평가원",
+  examType: "모의평가",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 6,
+  paperType: "공통",
+  selectedSubject: "기하",
+  answers: [
+    5,4,2,2,1,4,3,3,1,2,
+    3,5,1,4,2,3,33,6,8,39,
+    110,380,
+    1,4,2,4,3,5,80,13
+  ]
+},
+
+{
+  id: "office_math_2023_04_prob",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 4,
+  paperType: "공통",
+  selectedSubject: "확률과 통계",
+  answers: [
+    2,4,5,1,5,4,1,3,1,2,
+    2,2,3,3,4,5,3,8,6,30,
+    22,32,
+    1,5,3,2,4,1,523,188
+  ]
+},
+
+{
+  id: "office_math_2023_04_calc",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 4,
+  paperType: "공통",
+  selectedSubject: "미적분",
+  answers: [
+    2,4,5,1,5,4,1,3,1,2,
+    2,2,3,3,4,5,3,8,6,30,
+    22,32,
+    2,1,4,3,3,4,79,107
+  ]
+},
+
+{
+  id: "office_math_2023_04_geo",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 4,
+  paperType: "공통",
+  selectedSubject: "기하",
+  answers: [
+    2,4,5,1,5,4,1,3,1,2,
+    2,2,3,3,4,5,3,8,6,30,
+    22,32,
+    3,5,5,1,4,4,171,24
+  ]
+},
+
+{
+  id: "office_math_2023_03_prob",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 3,
+  paperType: "공통",
+  selectedSubject: "확률과 통계",
+  answers: [
+    1,4,1,2,5,1,3,5,2,2,
+    3,4,4,5,3,4,11,427,18,66,
+    12,729,
+    1,3,4,5,2,5,120,45
+  ]
+},
+
+{
+  id: "office_math_2023_03_calc",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 3,
+  paperType: "공통",
+  selectedSubject: "미적분",
+  answers: [
+    1,4,1,2,5,1,3,5,2,2,
+    3,4,4,5,3,4,11,427,18,66,
+    12,729,
+    4,2,3,5,1,2,50,25
+  ]
+},
+
+{
+  id: "office_math_2023_03_geo",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고3",
+  subject: "수학",
+  year: 2023,
+  month: 3,
+  paperType: "공통",
+  selectedSubject: "기하",
+  answers: [
+    1,4,1,2,5,1,3,5,2,2,
+    3,4,4,5,3,4,11,427,18,66,
+    12,729,
+    5,1,3,2,4,4,96,100
+  ]
+},
+
+{
+  id: "office_math_2023_11_g2",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고2",
+  subject: "수학",
+  year: 2023,
+  month: 11,
+  paperType: "공통",
+  selectedSubject: "공통",
+  answers: [
+    2,1,5,4,3,
+    3,2,3,4,1,
+    5,2,4,1,1,
+    3,5,4,2,5,
+    4,4,15,7,8,
+    12,18,16,14,30
+  ]
+},
+
+{
+  id: "office_math_2023_09_g2",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고2",
+  subject: "수학",
+  year: 2023,
+  month: 9,
+  paperType: "공통",
+  selectedSubject: "공통",
+  answers: [
+    4,1,5,3,5,
+    2,4,3,3,2,
+    1,1,4,3,5,
+    2,4,4,5,2,
+    3,2,6,24,10,
+    20,74,191,5,311
+  ]
+},
+
+{
+  id: "office_math_2023_06_g2",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고2",
+  subject: "수학",
+  year: 2023,
+  month: 6,
+  paperType: "공통",
+  selectedSubject: "공통",
+  answers: [
+    3,2,1,4,4,
+    3,2,5,4,5,
+    1,1,1,3,5,
+    5,3,4,1,2,
+    5,81,13,9,7,
+    52,56,35,17,5
+  ]
+},
+
+{
+  id: "office_math_2023_03_g2",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고2",
+  subject: "수학",
+  year: 2023,
+  month: 3,
+  paperType: "공통",
+  selectedSubject: "공통",
+  answers: [
+    3,4,5,1,5,
+    2,3,2,4,1,
+    4,3,5,2,1,
+    5,4,2,1,3,
+    2,35,5,22,3,
+    9,16,12,15,250
+  ]
+},
+
+{
+  id: "office_math_2023_11_g1",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고1",
+  subject: "수학",
+  year: 2023,
+  month: 11,
+  paperType: "공통",
+  selectedSubject: "공통",
+  answers: [
+    5,1,4,2,3,
+    1,3,5,2,1,
+    1,4,4,4,3,
+    5,1,2,3,1,
+    5,25,4,5,9,
+    15,16,148,26,6
+  ]
+},
+
+{
+  id: "office_math_2023_09_g1",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고1",
+  subject: "수학",
+  year: 2023,
+  month: 9,
+  paperType: "공통",
+  selectedSubject: "공통",
+  answers: [
+    4,3,2,4,5,
+    3,2,1,3,5,
+    2,4,4,5,5,
+    3,1,1,3,5,
+    4,3,15,7,10,
+    8,91,121,17,82
+  ]
+},
+
+{
+  id: "office_math_2023_06_g1",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고1",
+  subject: "수학",
+  year: 2023,
+  month: 6,
+  paperType: "공통",
+  selectedSubject: "공통",
+  answers: [
+    5,1,4,5,3,
+    4,3,1,3,4,
+    2,2,3,1,2,
+    3,2,5,4,1,
+    5,6,16,7,14,
+    23,21,91,94,120
+  ]
+},
+
+{
+  id: "office_math_2023_03_g1",
+  provider: "교육청",
+  examType: "모의고사",
+  grade: "고1",
+  subject: "수학",
+  year: 2023,
+  month: 3,
+  paperType: "공통",
+  selectedSubject: "공통",
+  answers: [
+    2,3,4,1,2,
+    1,5,3,3,4,
+    2,3,2,5,3,
+    4,5,1,4,1,
+    2,9,6,112,7,
+    23,420,18,25,2
+  ]
 }
 
 ];
