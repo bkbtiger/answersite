@@ -690,8 +690,8 @@ function renderExamLinks() {
 function renderExamTree() { //전체목록
   const container = document.getElementById("examTree"); //전체목록
   if (!container) return; //전체목록
-  
-  const sorted = [...examData].sort((a, b) => {
+
+  const sorted = [...examData].sort((a, b) => { //전체목록
     if (b.year !== a.year) return b.year - a.year;
     if (b.month !== a.month) return b.month - a.month;
 
@@ -700,20 +700,25 @@ function renderExamTree() { //전체목록
       return (gradeOrder[b.grade] || 0) - (gradeOrder[a.grade] || 0);
     }
 
+    const subjectOrder = { "국어": 1, "수학": 2, "영어": 3 };
+    if ((subjectOrder[a.subject] || 99) !== (subjectOrder[b.subject] || 99)) {
+      return (subjectOrder[a.subject] || 99) - (subjectOrder[b.subject] || 99);
+    }
+
     return a.subject.localeCompare(b.subject, "ko");
   });
-  
+
   const grades = ["고3", "고2", "고1"];
   let html = "";
 
   grades.forEach(grade => {
-    const gradeData = sorted.filter(exam => exam.grade === grade);
+    const gradeData = sorted.filter(exam => exam.grade === grade);              //싹다 전체목록
     if (gradeData.length === 0) return;
 
-    html += `<details class="tree-grade" open>`;
+    html += `<details class="tree-grade">`;
     html += `<summary>${grade}</summary>`;
 
-    const years = [...new Set(gradeData.map(exam => exam.year))].sort((a, b) => b - a);          //싹다 전체목록
+    const years = [...new Set(gradeData.map(exam => exam.year))].sort((a, b) => b - a);
 
     years.forEach(year => {
       const yearData = gradeData.filter(exam => exam.year === year);
@@ -728,20 +733,34 @@ function renderExamTree() { //전체목록
 
         html += `<details class="tree-month">`;
         html += `<summary>${month}월</summary>`;
-        html += `<div class="tree-links">`;
 
-        monthData.forEach(exam => {
-          const slug = createExamSlug(exam);
-          const title = getExamLinkTitle(exam);
-
-          html += `
-            <div class="tree-link-item">
-              <a href="/answer/${slug}">${title}</a>
-            </div>
-          `;
+        const subjects = [...new Set(monthData.map(exam => exam.subject))].sort((a, b) => {
+          const subjectOrder = { "국어": 1, "수학": 2, "영어": 3 };
+          return (subjectOrder[a] || 99) - (subjectOrder[b] || 99) || a.localeCompare(b, "ko");
         });
 
-        html += `</div>`;
+        subjects.forEach(subject => {
+          const subjectData = monthData.filter(exam => exam.subject === subject);
+
+          html += `<details class="tree-subject">`;
+          html += `<summary>${subject}</summary>`;
+          html += `<div class="tree-links">`;
+
+          subjectData.forEach(exam => {
+            const slug = createExamSlug(exam);
+            const title = getExamLinkTitle(exam);
+
+            html += `
+              <div class="tree-link-item">
+                <a href="/answer/${slug}">${title}</a>
+              </div>
+            `;
+          });
+
+          html += `</div>`;
+          html += `</details>`;
+        });
+
         html += `</details>`;
       });
 

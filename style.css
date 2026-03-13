@@ -330,6 +330,10 @@ td {
   padding-left: 12px;
 }
 
+.tree-subject { /*좀더 보기좋게*/
+  margin-left: 8px; /*좀더 보기좋게*/
+} /*좀더 보기좋게*/
+
 .tree-link-item {
   margin: 6px 0;
   line-height: 1.45;
