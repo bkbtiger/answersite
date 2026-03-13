@@ -687,4 +687,72 @@ function renderExamLinks() {
   container.innerHTML = html;
 }
 
+function renderExamTree() { //전체목록
+  const container = document.getElementById("examTree"); //전체목록
+  if (!container) return; //전체목록
+  
+  const sorted = [...examData].sort((a, b) => {
+    if (b.year !== a.year) return b.year - a.year;
+    if (b.month !== a.month) return b.month - a.month;
+
+    const gradeOrder = { "고3": 3, "고2": 2, "고1": 1 };
+    if ((gradeOrder[b.grade] || 0) !== (gradeOrder[a.grade] || 0)) {
+      return (gradeOrder[b.grade] || 0) - (gradeOrder[a.grade] || 0);
+    }
+
+    return a.subject.localeCompare(b.subject, "ko");
+  });
+  
+  const grades = ["고3", "고2", "고1"];
+  let html = "";
+
+  grades.forEach(grade => {
+    const gradeData = sorted.filter(exam => exam.grade === grade);
+    if (gradeData.length === 0) return;
+
+    html += `<details class="tree-grade" open>`;
+    html += `<summary>${grade}</summary>`;
+
+    const years = [...new Set(gradeData.map(exam => exam.year))].sort((a, b) => b - a);          //싹다 전체목록
+
+    years.forEach(year => {
+      const yearData = gradeData.filter(exam => exam.year === year);
+
+      html += `<details class="tree-year">`;
+      html += `<summary>${year}년</summary>`;
+
+      const months = [...new Set(yearData.map(exam => exam.month))].sort((a, b) => b - a);
+
+      months.forEach(month => {
+        const monthData = yearData.filter(exam => exam.month === month);
+
+        html += `<details class="tree-month">`;
+        html += `<summary>${month}월</summary>`;
+        html += `<div class="tree-links">`;
+
+        monthData.forEach(exam => {
+          const slug = createExamSlug(exam);
+          const title = getExamLinkTitle(exam);
+
+          html += `
+            <div class="tree-link-item">
+              <a href="/answer/${slug}">${title}</a>
+            </div>
+          `;
+        });
+
+        html += `</div>`;
+        html += `</details>`;
+      });
+
+      html += `</details>`;
+    });
+
+    html += `</details>`;
+  });
+
+  container.innerHTML = html;
+} //여기까지 전체목록
+
 renderExamLinks();
+renderExamTree(); //전체목록
